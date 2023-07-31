@@ -7,7 +7,7 @@ const app = express()
 
 app.use(express.json())
 
-const Port = 8000
+const PORT = 8000
 
 const AppDataSource = new DataSource({
     type:'postgres',
@@ -19,10 +19,12 @@ const AppDataSource = new DataSource({
 })
 
 AppDataSource.initialize().then(()=>{
-    app.listen(Port,()=>{
+    app.listen(PORT,()=>{
         console.log("Running")
     })
 }).catch(err=>{console.log(err)})
+
+
 app.get('/', function(req,res) {
     res.send("Hello")
 })
