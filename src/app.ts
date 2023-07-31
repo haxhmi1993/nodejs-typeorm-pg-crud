@@ -16,6 +16,9 @@ const AppDataSource = new DataSource({
     username:'postgres', // should be in .env file
     password: 'postgres', // should be in .env file
     database:'typeorm_db', // should be in .env file
+    entities:["src/entities/*{.ts,.js}"],
+    synchronize:true, 
+    logging:true,
 })
 
 AppDataSource.initialize().then(()=>{
