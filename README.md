@@ -1,4 +1,4 @@
-# nodejs-pg-boilerplate
+# nodejs-typeorm-pg-crud
 To start nodejs typescript project
 
 Install typescript globally
